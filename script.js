@@ -1,13 +1,8 @@
-let btn = document.getElementById('btnID');
-
-btn.addEventListener('click', (e) => {
-  
-    let div = document.createElement("div");
-    div.id = "div_id" ;
-    div.className = "div_class";
-    div.style = "background-color: red;";
-    div.style.width = "100px";
-    div.style.height = "100px";
-    document.body.appendChild(div);  
-  
-});
+document.body.onload = addElement;
+function addElement () {
+    const newDiv = document.createElement("div");
+    const newContent = document.createTextNode("Hi there and greetings!");
+    newDiv.appendChild(newContent);
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+  }

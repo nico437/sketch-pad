@@ -9,3 +9,9 @@ for(let i = 0; i<256; i++) {
     board.insertAdjacentElement('beforeend' , square);
 }  
 }
+
+populateBoard(16);
+
+function changeSize(input) {
+populateBoard(input)
+}
